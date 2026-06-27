@@ -1,0 +1,280 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Student Dashboard | Forensix</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#edf0ff",
+                        "tertiary": "#006242",
+                        "secondary": "#505f76",
+                        "surface-dim": "#d3daef",
+                        "surface-tint": "#0053db",
+                        "surface-container-high": "#e1e8fd",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "on-primary-fixed": "#00174b",
+                        "on-secondary-container": "#54647a",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#002113",
+                        "inverse-surface": "#293040",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "secondary-container": "#d0e1fb",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-container-highest": "#dce2f7",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "surface": "#f9f9ff",
+                        "primary-container": "#2563eb",
+                        "outline-variant": "#c3c6d7",
+                        "tertiary-fixed": "#6ffbbe",
+                        "on-surface-variant": "#434655",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f9f9ff",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "surface-container-low": "#f1f3ff",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#b4c5ff",
+                        "secondary-fixed": "#d3e4fe",
+                        "primary": "#004ac6",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-surface": "#141b2b",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#dce2f7",
+                        "on-primary-container": "#eeefff",
+                        "tertiary-container": "#007d55",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-tertiary-container": "#bdffdb",
+                        "surface-container": "#e9edff",
+                        "outline": "#737686",
+                        "background": "#f9f9ff",
+                        "on-background": "#141b2b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "xl": "48px",
+                        "base": "4px",
+                        "md": "16px",
+                        "xs": "4px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface dark:bg-slate-950 text-on-surface dark:text-slate-50 transition-colors duration-300">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest dark:bg-slate-900 shadow-sm border-b border-outline-variant dark:border-slate-800">
+<div class="flex justify-between items-center px-lg py-sm max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim flex items-center gap-2"><span class="material-symbols-outlined" data-icon="microscope">microwave</span><span class="dark:text-slate-50">Forensix</span></div>
+<div class="flex items-center gap-sm">
+<button class="p-base text-on-surface-variant dark:text-slate-400 hover:bg-surface-container-high dark:hover:bg-slate-800 rounded-full transition-all" onclick="toggleDarkMode()">
+<span class="material-symbols-outlined" data-icon="dark_mode" id="dark-mode-icon">dark_mode</span>
+</button>
+<button class="text-label-md font-label-md text-on-surface-variant dark:text-slate-400 active:opacity-80 transition-all px-sm py-xs">
+                Logout
+            </button>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="pt-24 pb-24 px-margin-mobile flex flex-col gap-lg max-w-screen-md mx-auto">
+<!-- Welcome & Subscription Status -->
+<section class="flex flex-col gap-xs">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface dark:text-slate-50">Welcome, Investigator</h1>
+<div class="flex items-center gap-sm">
+<span class="bg-secondary-container dark:bg-slate-800 text-on-secondary-container dark:text-slate-50 text-label-sm font-label-sm px-md py-xs rounded-full">
+                Subscription: 320 Days Left
+            </span>
+<span class="bg-tertiary-container/10 text-tertiary dark:text-tertiary-fixed text-label-sm font-label-sm px-md py-xs rounded-full border border-tertiary/20">
+                Pro Plan
+            </span>
+</div>
+</section>
+<!-- Primary Action: Live Zoom Class Focus -->
+<section class="bg-primary-container text-white p-lg rounded-xl shadow-lg border border-primary/20 flex flex-col gap-md relative overflow-hidden">
+<div class="absolute -right-8 -top-8 opacity-10">
+<span class="material-symbols-outlined text-[120px]" data-icon="videocam">videocam</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-sm mb-xs">
+<span class="flex items-center gap-xs bg-error px-sm py-xs rounded text-label-sm font-bold animate-pulse">
+<span class="w-2 h-2 bg-white rounded-full"></span>
+                LIVE NOW
+            </span>
+<span class="text-label-sm opacity-90">Started at 10:00 AM</span>
+</div>
+<h2 class="font-headline-md text-headline-md leading-tight mb-md">[Current Lecture Title]</h2>
+<button class="w-full bg-white text-primary font-bold py-md px-lg rounded-full flex items-center justify-center gap-sm shadow-md active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined" data-icon="video_call">video_call</span>
+            Join Live Zoom Class
+        </button>
+</div>
+</section>
+<!-- Progress Tracker Card -->
+<div class="bg-surface-container-lowest dark:bg-slate-900 p-md rounded-xl border border-outline-variant dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-end mb-sm">
+<span class="font-label-md text-label-md text-on-surface-variant dark:text-slate-400">Overall Course Completion</span>
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">45%</span>
+</div>
+<div class="w-full bg-surface-container dark:bg-slate-800 h-[6px] rounded-full overflow-hidden">
+<div class="bg-primary dark:bg-primary-fixed-dim h-full w-[45%] transition-all duration-1000 ease-out"></div>
+</div>
+</div>
+<!-- Notice Board -->
+<section class="bg-surface-container-lowest dark:bg-slate-900 p-md rounded-xl border border-outline-variant dark:border-slate-800 flex flex-col gap-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="campaign">campaign</span>
+<h3 class="font-headline-md text-headline-md dark:text-slate-50">Notice Board</h3>
+</div>
+<div class="flex flex-col gap-sm">
+<!-- Regular Notice -->
+<div class="p-sm border-b border-outline-variant dark:border-slate-800 flex flex-col gap-xs">
+<div class="flex justify-between items-center">
+<span class="text-label-sm font-label-sm text-on-surface-variant dark:text-slate-400">2 Hours Ago</span>
+</div>
+<p class="font-body-md text-body-md dark:text-slate-300">[Announcement Title]: [Announcement Description]</p>
+</div>
+<!-- Regular Notice -->
+<div class="p-sm flex flex-col gap-xs">
+<div class="flex justify-between items-center">
+<span class="text-label-sm font-label-sm text-on-surface-variant dark:text-slate-400">Yesterday</span>
+</div>
+<p class="font-body-md text-body-md dark:text-slate-300">[Announcement Title]: [Announcement Description]</p>
+</div>
+</div>
+</section>
+<!-- Resource Library / Study Notes Section -->
+<section class="bg-surface-container-lowest dark:bg-slate-900 p-md rounded-xl border border-outline-variant dark:border-slate-800 flex flex-col gap-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="library_books">library_books</span>
+<h3 class="font-headline-md text-headline-md dark:text-slate-50">Study Notes</h3>
+</div>
+<button class="text-primary text-label-md font-bold">View All</button>
+</div>
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between p-md bg-surface-container-low dark:bg-slate-800/40 rounded-lg border border-outline-variant/30">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 bg-primary/10 rounded flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<div><p class="font-label-md dark:text-slate-200">[Document Title]</p><p class="text-label-sm text-on-surface-variant dark:text-slate-400">[Type] • [Size]</p></div>
+</div>
+<button class="text-primary-container p-sm">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-md bg-surface-container-low dark:bg-slate-800/40 rounded-lg border border-outline-variant/30">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 bg-primary/10 rounded flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<div><p class="font-label-md dark:text-slate-200">[Document Title]</p><p class="text-label-sm text-on-surface-variant dark:text-slate-400">[Type] • [Size]</p></div>
+</div>
+<button class="text-primary-container p-sm">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-md bg-surface-container-low dark:bg-slate-800/40 rounded-lg border border-outline-variant/30">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 bg-primary/10 rounded flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<div><p class="font-label-md dark:text-slate-200">[Document Title]</p><p class="text-label-sm text-on-surface-variant dark:text-slate-400">[Type] • [Size]</p></div>
+</div>
+<button class="text-primary-container p-sm">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Nav -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface-container-lowest dark:bg-slate-900 border-t border-outline-variant dark:border-slate-800 px-md py-sm flex justify-around items-center z-50">
+<button class="flex flex-col items-center gap-xs text-primary dark:text-primary-fixed-dim">
+<span class="material-symbols-outlined" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-label-sm font-label-sm">Home</span>
+</button>
+<button class="flex flex-col items-center gap-xs text-on-surface-variant dark:text-slate-400">
+<span class="material-symbols-outlined" data-icon="videocam">videocam</span>
+<span class="text-label-sm font-label-sm">Live Class</span>
+</button>
+<button class="flex flex-col items-center gap-xs text-on-surface-variant dark:text-slate-400">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="text-label-sm font-label-sm">Notes</span>
+</button>
+<button class="flex flex-col items-center gap-xs text-on-surface-variant dark:text-slate-400">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="text-label-sm font-label-sm">Profile</span>
+</button>
+</nav>
+<script>
+    function toggleDarkMode() {
+        const html = document.documentElement;
+        const icon = document.getElementById('dark-mode-icon');
+        
+        if (html.classList.contains('dark')) {
+            html.classList.remove('dark');
+            icon.textContent = 'dark_mode';
+        } else {
+            html.classList.add('dark');
+            icon.textContent = 'light_mode';
+        }
+    }
+</script>
+
+
+</body></html>
