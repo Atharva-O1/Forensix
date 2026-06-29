@@ -1,10 +1,12 @@
-<!DOCTYPE html><html class="dark" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Forensix Academy | Master Forensic Science</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -105,52 +107,36 @@
     </script>
 <style>
         body {
-            background-color: #0c1324; /* surface-dim */
-            color: #dce1fb; /* on-surface */
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
-        }
-        .dark body {
-            background-color: #0c1324;
-            color: #dce1fb;
-        }
-        html:not(.dark) body {
-            background-color: #f8fafc;
-            color: #0f172a;
-        }
-        .glass-card {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(30, 41, 59, 0.5);
-        }
-        html:not(.dark) .glass-card {
-            background: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(203, 213, 225, 0.5);
         }
         .text-glow {
             text-shadow: 0 0 20px rgba(180, 197, 255, 0.3);
         }
+        html:not(.dark) .text-glow {
+            text-shadow: none;
+        }
     </style>
 </head>
-<body class="selection:bg-primary selection:text-on-primary">
+<body class="bg-slate-50 text-slate-900 dark:bg-surface-dim dark:text-on-surface transition-colors duration-300 selection:bg-primary selection:text-on-primary">
 <!-- 1. TopAppBar -->
-<header class="docked full-width top-0 sticky z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant transition-colors duration-300">
-<nav class="flex items-center justify-between px-margin-desktop py-4 max-w-container-max mx-auto">
+<header class="docked full-width top-0 sticky z-50 bg-white/80 dark:bg-surface/80 backdrop-blur-md border-b border-slate-200 dark:border-outline-variant transition-colors duration-300">
+<nav class="flex items-center justify-between px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">biotech</span>
-<span class="font-headline-md text-headline-md font-bold text-primary tracking-tight">Forensix</span>
+<span class="font-headline-md text-headline-md font-bold text-slate-900 dark:text-primary tracking-tight">Forensix</span>
 </div>
 <div class="flex items-center gap-4 md:gap-8">
 <div class="hidden md:flex items-center gap-8">
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#pricing">Pricing</a>
-<button class="bg-primary-container text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg scale-95 active:scale-90 transition-transform font-bold" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">Enroll Now</button>
+<a class="font-label-md text-label-md text-slate-600 dark:text-on-surface-variant hover:text-primary transition-colors" href="#pricing">Pricing</a>
+<button class="bg-primary-container text-white dark:text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg scale-95 active:scale-90 transition-transform font-bold" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">Enroll Now</button>
 </div>
 <!-- Theme Toggle -->
-<button class="p-2 rounded-full hover:bg-surface-variant transition-colors text-on-surface" id="theme-toggle" title="Toggle Light/Dark Mode">
-<span class="material-symbols-outlined" id="theme-toggle-dark-icon">light_mode</span>
-<span class="material-symbols-outlined hidden" id="theme-toggle-light-icon">dark_mode</span>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-surface-variant transition-colors text-slate-700 dark:text-on-surface" id="theme-toggle" title="Toggle Light/Dark Mode">
+<span class="material-symbols-outlined block dark:hidden" id="theme-toggle-light-icon">dark_mode</span>
+<span class="material-symbols-outlined hidden dark:block" id="theme-toggle-dark-icon">light_mode</span>
 </button>
-<button class="md:hidden text-on-surface">
+<button class="md:hidden text-slate-900 dark:text-on-surface">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
@@ -158,100 +144,97 @@
 </header>
 <main>
 <!-- 2. Hero Section -->
-<section class="relative min-h-[600px] flex flex-col items-center justify-center text-center px-margin-mobile md:px-margin-desktop py-stack-lg overflow-hidden transition-all duration-700 opacity-100 translate-y-0">
-<!-- Background Decoration -->
+<section class="relative min-h-[600px] flex flex-col items-center justify-center text-center px-margin-mobile md:px-margin-desktop py-stack-lg overflow-hidden">
 <div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background to-background"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-slate-50 to-slate-50 dark:via-background dark:to-background"></div>
 </div>
 <div class="relative z-10 max-w-4xl">
-<h1 class="font-display text-display text-glow mb-stack-md leading-none text-on-surface dark:text-glow">
-            Master <span class="text-primary">Forensic Science</span>
+<h1 class="font-display text-display mb-stack-md leading-none text-slate-900 dark:text-on-surface dark:text-glow">
+                Master <span class="text-primary-container dark:text-primary">Forensic Science</span>
 </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-2xl mx-auto">
-            Become an expert with our comprehensive 1-Year Premium Forensic Science Course. Learn from professional professors in a digital laboratory environment.
-        </p>
+<p class="font-body-lg text-body-lg text-slate-600 dark:text-on-surface-variant mb-stack-lg max-w-2xl mx-auto">
+                Become an expert with our comprehensive 1-Year Premium Forensic Science Course. Learn from professional professors in a digital laboratory environment.
+            </p>
 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-<button class="w-full sm:w-auto bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-lg shadow-lg hover:shadow-primary/20 transition-all font-bold uppercase tracking-widest" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">
-                Enroll Now
-            </button>
+<button class="w-full sm:w-auto bg-primary-container dark:bg-primary text-white dark:text-on-primary font-label-md text-label-md px-8 py-4 rounded-lg shadow-lg hover:shadow-primary/20 transition-all font-bold uppercase tracking-widest" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">
+                    Enroll Now
+                </button>
 </div>
 </div>
 </section>
 <!-- 4. Pricing Section -->
-<section class="py-stack-lg bg-surface-container-lowest px-margin-mobile md:px-margin-desktop transition-all duration-700 opacity-100 translate-y-0" id="pricing">
+<section class="py-stack-lg bg-white dark:bg-surface-container-lowest px-margin-mobile md:px-margin-desktop transition-colors duration-300" id="pricing">
 <div class="max-w-container-max mx-auto">
 <div class="text-center mb-16">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-sm">Simple, Professional Pricing</h2>
-<p class="text-on-surface-variant font-body-md">Invest in your career with full institutional access.</p>
+<h2 class="font-headline-lg text-headline-lg text-slate-900 dark:text-on-surface mb-stack-sm">Simple, Professional Pricing</h2>
+<p class="text-slate-600 dark:text-on-surface-variant font-body-md">Invest in your career with full institutional access.</p>
 </div>
 <div class="max-w-md mx-auto">
-<div class="relative bg-surface-card rounded-2xl border-2 border-primary shadow-2xl shadow-primary/10 overflow-hidden group">
+<div class="relative bg-slate-50 dark:bg-surface-card rounded-2xl border-2 border-primary-container dark:border-primary shadow-xl dark:shadow-2xl dark:shadow-primary/10 overflow-hidden group transition-colors duration-300">
 <!-- Recommended Badge -->
-<div class="absolute top-0 right-0 bg-primary text-on-primary text-[10px] font-bold px-4 py-1 rounded-bl-lg tracking-widest uppercase">
-                    Recommended
-                </div>
+<div class="absolute top-0 right-0 bg-primary-container dark:bg-primary text-white dark:text-on-primary text-[10px] font-bold px-4 py-1 rounded-bl-lg tracking-widest uppercase">
+                        Recommended
+                    </div>
 <div class="p-8">
-<div class="font-label-md text-label-md text-primary mb-2 uppercase tracking-widest">Pro Plan</div>
+<div class="font-label-md text-label-md text-primary-container dark:text-primary mb-2 uppercase tracking-widest">Pro Plan</div>
 <div class="flex items-baseline gap-1 mb-stack-lg">
-<span class="font-display text-4xl text-on-surface">₹7,000</span>
-<span class="text-on-surface-variant font-label-md">/year</span>
+<span class="font-display text-4xl text-slate-900 dark:text-on-surface">₹7,000</span>
+<span class="text-slate-500 dark:text-on-surface-variant font-label-md">/year</span>
 </div>
 <ul class="space-y-4 mb-stack-lg">
 <li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-success-emerald" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-on-surface">365 Days Full Platform Access</span>
+<span class="material-symbols-outlined text-emerald-600 dark:text-success-emerald" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-slate-700 dark:text-on-surface">365 Days Full Platform Access</span>
 </li>
 <li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-success-emerald" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-on-surface">High-Yield PDF Notes &amp; Case Files</span>
+<span class="material-symbols-outlined text-emerald-600 dark:text-success-emerald" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-slate-700 dark:text-on-surface">High-Yield PDF Notes &amp; Case Files</span>
 </li>
 <li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-success-emerald" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-on-surface">Monthly Live Masterclasses</span>
+<span class="material-symbols-outlined text-emerald-600 dark:text-success-emerald" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-slate-700 dark:text-on-surface">Monthly Live Masterclasses</span>
 </li>
 <li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-success-emerald" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-on-surface">Full Course Completion Award</span>
+<span class="material-symbols-outlined text-emerald-600 dark:text-success-emerald" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-slate-700 dark:text-on-surface">Full Course Completion Award</span>
 </li>
 <li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-success-emerald" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-on-surface">Priority Lab Support</span>
+<span class="material-symbols-outlined text-emerald-600 dark:text-success-emerald" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-slate-700 dark:text-on-surface">Priority Lab Support</span>
 </li>
 </ul>
 <button class="w-full bg-[#004ac6] text-white font-label-md text-label-md py-4 rounded-lg flex items-center justify-center gap-2 font-bold uppercase hover:opacity-90 transition-all scale-100 active:scale-95">
-                        Subscribe via Razorpay
-                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                            Subscribe via Razorpay
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
 </button>
-<p class="text-center font-label-md text-on-surface-variant mt-4 opacity-70">Secure payment via Razorpay. Instant access after payment.</p>
+<p class="text-center font-label-md text-slate-500 dark:text-on-surface-variant mt-4 opacity-70">Secure payment via Razorpay. Instant access after payment.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Course Environment Visual (Bento Grid Style) -->
-
 </main>
 <!-- 5. Footer -->
-<footer class="full-width bottom-0 bg-surface-container-lowest border-t border-outline-variant">
-<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-stack-lg max-w-container-max mx-auto gap-stack-md">
+<footer class="full-width bottom-0 bg-slate-100 dark:bg-surface-container-lowest border-t border-slate-200 dark:border-outline-variant transition-colors duration-300">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto gap-stack-md">
 <div class="flex flex-col gap-2">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary">biotech</span>
-<span class="font-headline-md text-headline-md font-bold text-primary">Forensix</span>
+<span class="material-symbols-outlined text-primary-container dark:text-primary">biotech</span>
+<span class="font-headline-md text-headline-md font-bold text-slate-900 dark:text-primary">Forensix</span>
 </div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Forensix Academy. All rights reserved.</p>
+<p class="font-body-sm text-body-sm text-slate-600 dark:text-on-surface-variant">© 2024 Forensix Academy. All rights reserved.</p>
 </div>
 <div class="flex flex-wrap justify-center gap-6">
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Refund Policy</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Contact Us</a>
+<a class="font-label-md text-label-md text-slate-600 dark:text-on-surface-variant hover:text-primary-container dark:hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-md text-label-md text-slate-600 dark:text-on-surface-variant hover:text-primary-container dark:hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-slate-600 dark:text-on-surface-variant hover:text-primary-container dark:hover:text-primary transition-colors" href="#">Refund Policy</a>
+<a class="font-label-md text-label-md text-slate-600 dark:text-on-surface-variant hover:text-primary-container dark:hover:text-primary transition-colors" href="#">Contact Us</a>
 </div>
 <div class="flex gap-4">
-<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary transition-all">
+<button class="w-10 h-10 rounded-full border border-slate-300 dark:border-outline-variant flex items-center justify-center text-slate-600 dark:text-on-surface-variant hover:border-primary-container dark:hover:border-primary hover:text-primary-container dark:hover:text-primary transition-all">
 <span class="material-symbols-outlined text-xl">share</span>
 </button>
-<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary transition-all">
+<button class="w-10 h-10 rounded-full border border-slate-300 dark:border-outline-variant flex items-center justify-center text-slate-600 dark:text-on-surface-variant hover:border-primary-container dark:hover:border-primary hover:text-primary-container dark:hover:text-primary transition-all">
 <span class="material-symbols-outlined text-xl">language</span>
 </button>
 </div>
@@ -260,31 +243,22 @@
 <script>
     // Theme Toggle Logic
     const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
-    // Initial icon state
-    if (document.documentElement.classList.contains('dark')) {
-        themeToggleDarkIcon.classList.remove('hidden');
-        themeToggleLightIcon.classList.add('hidden');
+    // Initialize theme based on preference or system
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
     } else {
-        themeToggleDarkIcon.classList.add('hidden');
-        themeToggleLightIcon.classList.remove('hidden');
+        document.documentElement.classList.remove('dark');
     }
 
     themeToggleBtn.addEventListener('click', function() {
         // Toggle class
-        document.documentElement.classList.toggle('dark');
-        
-        // Toggle icons
-        themeToggleDarkIcon.classList.toggle('hidden');
-        themeToggleLightIcon.classList.toggle('hidden');
-        
-        // Save preference
         if (document.documentElement.classList.contains('dark')) {
-            localStorage.setItem('color-theme', 'dark');
-        } else {
+            document.documentElement.classList.remove('dark');
             localStorage.setItem('color-theme', 'light');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
         }
     });
 
@@ -307,6 +281,4 @@
         observer.observe(section);
     });
 </script>
-
-
 </body></html>
