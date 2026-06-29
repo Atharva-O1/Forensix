@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | Forensix Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#b8c8ff",
+                    "surface-bright": "#33394c",
+                    "tertiary": "#ffb59e",
+                    "warning-amber": "#f59e0b",
+                    "on-tertiary": "#5e1700",
+                    "surface-container": "#191f31",
+                    "surface": "#0c1324",
+                    "secondary": "#7bd0ff",
+                    "on-surface-variant": "#c3c6d6",
+                    "primary-container": "#004ac6",
+                    "on-background": "#dce1fb",
+                    "tertiary-fixed-dim": "#ffb59e",
+                    "inverse-surface": "#dce1fb",
+                    "surface-container-highest": "#2e3447",
+                    "surface-container-low": "#151b2d",
+                    "secondary-fixed-dim": "#7bd0ff",
+                    "on-tertiary-fixed-variant": "#842500",
+                    "error-rose": "#f43f5e",
+                    "tertiary-fixed": "#ffdbd0",
+                    "on-secondary-container": "#00374d",
+                    "surface-dim": "#0c1324",
+                    "secondary": "#7bd0ff",
+                    "on-secondary-fixed": "#001e2c",
+                    "on-primary": "#002a78",
+                    "primary": "#b4c5ff",
+                    "on-error": "#690005",
+                    "surface-tint": "#b4c5ff",
+                    "success-emerald": "#10b981",
+                    "on-tertiary-fixed": "#3a0b00",
+                    "on-surface": "#dce1fb",
+                    "surface-container-high": "#23293c",
+                    "inverse-on-surface": "#2a3043",
+                    "on-primary-fixed": "#00174b",
+                    "outline-variant": "#434654",
+                    "outline": "#8d90a0",
+                    "error-container": "#93000a",
+                    "surface-variant": "#2e3447",
+                    "surface-card": "#0f172a",
+                    "primary-fixed": "#dbe1ff",
+                    "surface-container-lowest": "#070d1f",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#00a6e0",
+                    "on-secondary-fixed-variant": "#004c69",
+                    "on-secondary": "#00354a",
+                    "error": "#ffb4ab",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "background": "#0c1324",
+                    "inverse-primary": "#1b55d0",
+                    "on-tertiary-container": "#ffb9a4",
+                    "tertiary-container": "#9c2e02"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "32px",
+                    "container-max": "1280px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for deep slate feel */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0c1324; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #004ac6; }
+
+        .glass-background {
+            background: radial-gradient(circle at 50% 50%, rgba(0, 74, 198, 0.05) 0%, transparent 70%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface dark:bg-surface-dim text-on-surface transition-colors duration-300 min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="w-full top-0 bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-surface-container-highest z-50">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-stack-sm cursor-pointer active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed text-headline-md" data-icon="biotech">biotech</span>
+<span class="text-headline-md font-headline-md text-primary dark:text-primary-fixed tracking-tight">Forensix</span>
+</div>
+<button class="p-2 rounded-full hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors flex items-center justify-center" id="theme-toggle">
+<span class="material-symbols-outlined text-on-surface-variant dark:text-on-surface-variant" data-icon="dark_mode" id="theme-icon">dark_mode</span>
+</button>
+</nav>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center relative px-margin-mobile glass-background">
+<!-- Background Animation Overlay -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden opacity-40">
+
+</div>
+<div class="w-full max-w-md z-10">
+<!-- Center Card -->
+<div class="bg-white dark:bg-surface-card border border-outline-variant dark:border-outline-variant/30 rounded-xl shadow-xl dark:shadow-2xl overflow-hidden transition-all duration-300">
+<div class="p-stack-lg space-y-stack-lg">
+<div class="text-center space-y-stack-sm">
+<h1 class="font-headline-lg text-headline-lg dark:text-primary-fixed">Student Login</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Enter your credentials to access the laboratory.</p>
+</div>
+<form action="#" class="space-y-stack-md" method="POST" onsubmit="return false;">
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant block" for="email">Email Address</label>
+<input class="w-full px-4 py-3 bg-surface-container-lowest dark:bg-surface-dim border border-outline-variant dark:border-surface-container-highest rounded-lg text-body-md focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all placeholder:opacity-50" id="email" name="email" placeholder="investigator@forensix.edu" type="email"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant block" for="password">Password</label>
+<input class="w-full px-4 py-3 bg-surface-container-lowest dark:bg-surface-dim border border-outline-variant dark:border-surface-container-highest rounded-lg text-body-md focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all placeholder:opacity-50" id="password" name="password" placeholder="••••••••" type="password"/>
+</div>
+<div class="pt-stack-sm">
+<button class="w-full bg-primary-container text-white font-headline-md text-body-md py-4 rounded-lg hover:brightness-110 active:scale-[0.98] transition-all shadow-md" type="submit">
+                                Sign In
+                            </button>
+</div>
+</form>
+<div class="text-center">
+<a class="font-label-md text-label-md text-primary dark:text-secondary hover:underline transition-colors" href="#">Forgot Password?</a>
+</div>
+</div>
+<!-- Card Footer (Identity Lock) -->
+<div class="px-stack-lg py-4 bg-surface-container-low dark:bg-surface-container border-t border-outline-variant dark:border-surface-container-highest flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-label-md text-on-surface-variant" data-icon="verified_user">verified_user</span>
+<span class="font-label-md text-[10px] text-on-surface-variant opacity-70 tracking-tight">SECURE ACADEMIC TERMINAL</span>
+</div>
+</div>
+<!-- Footer Context Text -->
+<p class="mt-8 text-center font-label-md text-label-md text-on-surface-variant opacity-60 px-4">
+                Access is strictly restricted to active 1-year subscribers. Unauthorized access attempts are monitored and recorded.
+            </p>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bottom-0 border-t border-outline-variant dark:border-surface-container-highest">
+<div class="flex flex-col md:flex-row justify-between items-center py-8 px-margin-mobile md:px-margin-desktop gap-stack-md w-full max-w-container-max mx-auto">
+<span class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant opacity-70 text-center md:text-left">
+                © 2024 Forensix Academy. Restricted access for verified forensic science subscribers only.
+            </span>
+<div class="flex gap-stack-md">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-secondary transition-colors underline" href="#">Terms of Use</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-secondary transition-colors underline" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-secondary transition-colors underline" href="#">System Status</a>
+</div>
+</div>
+</footer>
+<script>
+themeToggle.addEventListener('click', () => {
+    if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        themeIcon.textContent = 'light_mode';
+        localStorage.setItem('theme', 'light');
+    } else {
+        html.classList.add('dark');
+        themeIcon.textContent = 'dark_mode';
+        localStorage.setItem('theme', 'dark'); 
+    }
+}); 
