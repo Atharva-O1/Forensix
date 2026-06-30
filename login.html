@@ -207,7 +207,6 @@
             themeIcon.textContent = isDark ? 'light_mode' : 'dark_mode';
         };
 
-        // Initialize theme from localStorage or system preference
         const initTheme = () => {
             const savedTheme = localStorage.getItem('theme');
             const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -219,7 +218,7 @@
                 html.classList.add('dark');
                 updateIcon(true);
             } else {
-                html.classList.add('dark'); // Default to dark as per design system
+                html.classList.add('dark'); 
                 updateIcon(true);
             }
         };
