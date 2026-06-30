@@ -121,23 +121,18 @@
             background-color: rgba(2, 6, 23, 0.8);
         }
     </style>
-<style>
-        body {
-          min-height: max(884px, 100dvh);
-        }
-    </style>
 </head>
-<body class="bg-background text-on-surface dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
 <!-- Top Navigation Bar -->
-<header class="fixed top-0 w-full z-50 border-b border-surface-variant dark:border-slate-800 glass-header">
+<header class="fixed top-0 w-full z-50 border-b border-slate-200 dark:border-slate-800 glass-header">
 <div class="flex items-center justify-between px-margin-mobile md:px-margin-desktop h-16 max-w-container-max mx-auto">
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-primary" data-icon="microscope">microwave</span>
 <span class="font-headline-md text-headline-md font-bold text-primary">Forensix</span>
 </div>
 <div class="flex items-center gap-stack-md">
-<button aria-label="Toggle Dark Mode" class="p-2 rounded-full hover:bg-surface-container dark:hover:bg-slate-800 transition-colors" id="theme-toggle">
-<span class="material-symbols-outlined text-on-surface-variant dark:text-slate-400" data-icon="dark_mode">dark_mode</span>
+<button aria-label="Toggle Dark Mode" class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" id="theme-toggle">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400" data-icon="dark_mode">dark_mode</span>
 </button>
 <button class="hidden md:block bg-primary-container text-on-primary-container px-6 py-2 font-label-md rounded-lg active:opacity-80 transition-all">
                 Sign In
@@ -148,86 +143,86 @@
 <main class="pt-24 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto min-h-screen">
 <!-- Document Meta Header -->
 <div class="mb-stack-lg animate-in fade-in slide-in-from-bottom-4 duration-700">
-<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-2 text-on-surface dark:text-slate-50">Privacy Policy</h1>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-2 text-slate-900 dark:text-slate-50">Privacy Policy</h1>
 <p class="font-label-md text-label-md text-primary tracking-widest uppercase">Last Updated: June 2026</p>
 </div>
 <div class="flex flex-col lg:flex-row gap-gutter">
 <!-- Secondary Navigation Menu (Sticky) -->
 <nav class="lg:w-72 flex-shrink-0">
-<div class="lg:sticky lg:top-28 space-y-2 p-1 bg-surface-container-low dark:bg-slate-900 border border-outline-variant dark:border-slate-800 rounded-xl">
-<a class="flex items-center px-4 py-3 rounded-lg text-on-surface-variant dark:text-slate-400 hover:bg-surface-container-high dark:hover:bg-slate-800 transition-colors font-body-md" href="#">
+<div class="lg:sticky lg:top-28 space-y-2 p-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl">
+<a class="flex items-center px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-body-md" href="#">
                     Terms &amp; Conditions
                 </a>
 <a class="flex items-center px-4 py-3 rounded-lg bg-primary-container text-on-primary-container font-bold transition-colors font-body-md" href="#">
                     Privacy Policy
                 </a>
-<a class="flex items-center px-4 py-3 rounded-lg text-on-surface-variant dark:text-slate-400 hover:bg-surface-container-high dark:hover:bg-slate-800 transition-colors font-body-md" href="#">
+<a class="flex items-center px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-body-md" href="#">
                     Refund &amp; Cancellation
                 </a>
-<a class="flex items-center px-4 py-3 rounded-lg text-on-surface-variant dark:text-slate-400 hover:bg-surface-container-high dark:hover:bg-slate-800 transition-colors font-body-md" href="#">
+<a class="flex items-center px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-body-md" href="#">
                     Contact Us
                 </a>
 </div>
 </nav>
 <!-- Policy Content Canvas -->
-<article class="flex-1 bg-surface-container-lowest dark:bg-slate-900 border border-outline-variant dark:border-slate-800 rounded-2xl p-6 md:p-12 shadow-sm">
+<article class="flex-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 md:p-12 shadow-sm">
 <!-- Section 1 -->
 <section class="mb-12">
 <div class="flex items-center gap-3 mb-stack-md">
 <span class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold">1</span>
-<h2 class="font-headline-md text-headline-md text-on-surface dark:text-slate-50">Introduction &amp; Acceptance</h2>
+<h2 class="font-headline-md text-headline-md text-slate-900 dark:text-slate-50">Introduction &amp; Acceptance</h2>
 </div>
-<div class="space-y-4 font-body-md text-on-surface-variant dark:text-slate-300 leading-relaxed">
+<div class="space-y-4 font-body-md text-slate-700 dark:text-slate-300 leading-relaxed">
 <p>Welcome to Forensix. This Privacy Policy serves as a legally binding instrument governing the collection, processing, and storage of your personal and academic data within our forensic science education ecosystem. By creating an account or accessing the Forensix laboratory workspace, you explicitly acknowledge that you have read, understood, and consented to the data protocols detailed herein.</p>
 <p>Our commitment to "Digital Lab" precision extends to your privacy. We implement rigorous analytical security measures to ensure that your forensic research data remains confidential and accessible only to verified personnel.</p>
 </div>
 </section>
 <!-- Section 2 -->
-<section class="mb-12 p-6 md:p-8 bg-surface-container dark:bg-slate-800/50 border-l-4 border-primary rounded-r-lg">
+<section class="mb-12 p-6 md:p-8 bg-slate-50 dark:bg-slate-800/50 border-l-4 border-primary rounded-r-lg">
 <div class="flex items-center gap-3 mb-stack-md">
 <span class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold">2</span>
-<h2 class="font-headline-md text-headline-md text-on-surface dark:text-slate-50">Account Security &amp; Expiration</h2>
+<h2 class="font-headline-md text-headline-md text-slate-900 dark:text-slate-50">Account Security &amp; Expiration</h2>
 </div>
-<div class="space-y-4 font-body-md text-on-surface dark:text-slate-100 leading-relaxed">
+<div class="space-y-4 font-body-md text-slate-900 dark:text-slate-100 leading-relaxed">
 <p class="font-semibold text-primary">Access Control &amp; Validity</p>
 <p>Access to the workspace is restricted to a single authenticated student profile and automatically terminates exactly 365 days from the verified payment activation date. Account sharing or credential distribution is strictly prohibited and results in immediate termination without warning.</p>
-<p class="text-on-surface-variant dark:text-slate-400 italic border-t border-outline-variant dark:border-slate-700 pt-4">Users are responsible for maintaining the confidentiality of their laboratory credentials. Forensix utilizes hardware-level fingerprinting to detect unauthorized concurrent sessions.</p>
+<p class="text-slate-500 dark:text-slate-400 italic border-t border-slate-200 dark:border-slate-700 pt-4">Users are responsible for maintaining the confidentiality of their laboratory credentials. Forensix utilizes hardware-level fingerprinting to detect unauthorized concurrent sessions.</p>
 </div>
 </section>
 <!-- Section 3 -->
 <section class="mb-12">
 <div class="flex items-center gap-3 mb-stack-md">
 <span class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold">3</span>
-<h2 class="font-headline-md text-headline-md text-on-surface dark:text-slate-50">Fee Structures &amp; Finality</h2>
+<h2 class="font-headline-md text-headline-md text-slate-900 dark:text-slate-50">Fee Structures &amp; Finality</h2>
 </div>
-<div class="p-6 bg-error-container/10 border border-error-container/30 rounded-xl">
-<p class="font-bold text-on-surface dark:text-slate-50 mb-stack-md uppercase tracking-wide">Refund Policy Notice</p>
-<p class="font-body-md text-on-surface dark:text-slate-200 leading-relaxed">
+<div class="p-6 bg-red-50 dark:bg-error-container/10 border border-red-200 dark:border-error-container/30 rounded-xl">
+<p class="font-bold text-slate-900 dark:text-slate-50 mb-stack-md uppercase tracking-wide">Refund Policy Notice</p>
+<p class="font-body-md text-slate-800 dark:text-slate-200 leading-relaxed">
 <strong>All transactions for the 1-year premium workspace are final.</strong> Due to the immediate provisioning of digital assets, downloadable notes, and lectures, no refunds, partial credits, or cancellations are permitted under any circumstances.
                     </p>
 </div>
-<div class="mt-6 font-body-sm text-on-surface-variant dark:text-slate-400 flex items-start gap-2">
+<div class="mt-6 font-body-sm text-slate-500 dark:text-slate-400 flex items-start gap-2">
 <span class="material-symbols-outlined text-primary scale-75" data-icon="info">info</span>
 <p>By proceeding with the transaction, you waive your right to any chargebacks or disputes regarding the digital nature of the content provided.</p>
 </div>
 </section>
-<hr class="border-outline-variant dark:border-slate-800 my-stack-lg"/>
+<hr class="border-slate-200 dark:border-slate-800 my-stack-lg"/>
 <!-- Additional Info -->
 <section>
-<h3 class="font-label-md text-label-md text-on-surface-variant dark:text-slate-400 mb-4 uppercase">Contact Laboratory Support</h3>
+<h3 class="font-label-md text-label-md text-slate-500 dark:text-slate-400 mb-4 uppercase">Contact Laboratory Support</h3>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<div class="p-4 rounded-lg bg-surface-container-high dark:bg-slate-800 border border-outline-variant dark:border-slate-700 flex items-center gap-4">
+<div class="p-4 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center gap-4">
 <span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
 <div>
-<p class="font-label-md text-label-md text-on-surface dark:text-slate-50">Technical Enquiries</p>
-<p class="font-body-sm text-on-surface-variant dark:text-slate-400">support@forensix.edu</p>
+<p class="font-label-md text-label-md text-slate-900 dark:text-slate-50">Technical Enquiries</p>
+<p class="font-body-sm text-slate-600 dark:text-slate-400">support@forensix.edu</p>
 </div>
 </div>
-<div class="p-4 rounded-lg bg-surface-container-high dark:bg-slate-800 border border-outline-variant dark:border-slate-700 flex items-center gap-4">
+<div class="p-4 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center gap-4">
 <span class="material-symbols-outlined text-primary" data-icon="gavel">gavel</span>
 <div>
-<p class="font-label-md text-label-md text-on-surface dark:text-slate-50">Legal Compliance</p>
-<p class="font-body-sm text-on-surface-variant dark:text-slate-400">legal@forensix.edu</p>
+<p class="font-label-md text-label-md text-slate-900 dark:text-slate-50">Legal Compliance</p>
+<p class="font-body-sm text-slate-600 dark:text-slate-400">legal@forensix.edu</p>
 </div>
 </div>
 </div>
@@ -236,16 +231,16 @@
 </div>
 </main>
 <!-- Footer -->
-<footer class="w-full border-t border-surface-variant dark:border-slate-800 bg-surface-container-lowest dark:bg-slate-950">
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
 <div class="flex flex-col md:flex-row justify-between items-center gap-stack-md py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="flex items-center gap-2">
-<span class="font-label-md text-label-md font-bold text-on-surface dark:text-slate-100">Forensix EdTech</span>
-<span class="text-on-surface-variant dark:text-slate-400 font-body-sm text-body-sm">© 2024. All rights reserved.</span>
+<span class="font-label-md text-label-md font-bold text-slate-900 dark:text-slate-100">Forensix EdTech</span>
+<span class="text-slate-500 dark:text-slate-400 font-body-sm text-body-sm">© 2024. All rights reserved.</span>
 </div>
 <div class="flex gap-stack-md">
-<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-slate-400 hover:text-primary transition-colors" href="#">Terms of Use</a>
+<a class="font-body-sm text-body-sm text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">Terms of Use</a>
 <a class="font-body-sm text-body-sm text-primary underline transition-colors" href="#">Privacy Policy</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-slate-400 hover:text-primary transition-colors" href="#">System Status</a>
+<a class="font-body-sm text-body-sm text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">System Status</a>
 </div>
 </div>
 </footer>
@@ -284,9 +279,12 @@
             const href = this.getAttribute('href');
             if(href && href.startsWith('#') && href !== '#') {
                 e.preventDefault();
-                document.querySelector(href).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });
